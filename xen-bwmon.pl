@@ -1,4 +1,4 @@
-#             CREATED BY STEVE CERRA
+#             CREATED BY STEVE CERRA - VERSION 1.1
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -12,6 +12,11 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
+# The comments included in the original code were mostly removed to save space
+# due to having to copy/paste it constantly for testing on live services.
+# I will be re-adding them soon.
+
 #!/usr/bin/perl
 use warnings;
 use strict;
@@ -23,7 +28,7 @@ my @curr = ();
 my @cache = ();
 my $grepp;
 
-my @vms = `grep "vifname" /home/xen/vm*/*.cfg`
+my @vms = `grep "vifname" /home/xen/vm*/*.cfg`;
 
 foreach (@vms) {
 	# $1 = VM	$2 = DEVICE
